@@ -5,11 +5,11 @@
 
 # Deep Reinforcement Learning: Let's learn to collect yellow Bananas 🍌
 
-This project implements a Deep Q-Network (DQN) to train an agent to navigate a 3D environment and collect yellow bananas while avoiding blue ones. The agent interacts with the Unity ML-Agents Banana environment, learning optimal policies through reinforcement learning.
+This project implements a Deep Q-Network (DQN) to train an agent to navigate a 3D environment and collect yellow bananas while avoiding blue ones. The agent interacts with the Unity ML-Agents Banana environment.
 
 Using PyTorch and Deep Q-Learning, the agent improves its decision-making over time, maximizing its score by collecting as many yellow bananas as possible while avoiding penalties from blue bananas. 
 
-In the upcoming section [Project Details](#project-details), an introduction into the project and the environment follows. Further, one can get familiar with the necessary steps to run this project on your own local device in the [Getting Started](#getting-started) and [Dependencies](#dependencies) sections. The three previously mentioned sections are mainly authored by Udacity and were copied into the project. Some minor adjustments were made to these sections. After sucessfully downloading and installing the prerequisites, in the section [Instructions](#instructions) one can get to know the two different ways to run the training for the DQN Agent. 
+In the upcoming section [Project Details](#project-details), an introduction into the project and the environment follows. Further, one can get familiar with the necessary steps to run this project on your own local device in the [Getting Started](#getting-started) and [Dependencies](#dependencies) sections. The three previously mentioned sections are mainly authored by Udacity and were copied into the project. Some minor adjustments were made to these sections. After sucessfully downloading and installing the prerequisites, in the section [Instructions](#instructions) one can get to know the two different ways to run the training for the DQN Agent. Finally, one can have a glimpse at the structure of the repository.
 
 #### Table of Contents
 
@@ -41,8 +41,8 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 ### Getting Started
 
-1. First of all, navigate to the Value-based-methods GitHub Page https://github.com/udacity/Value-based-methods/tree/main?tab=readme-ov-file and clone the project.
-2. Follow the Dependencies from the Value-based-methods GitHub page. For easier navigation, I copied the dependencies in this project's README markdown in the following section.
+1. First of all, clone this Value-based-methods directory (https://github.com/sifesch/Value-based-methods). (For reference: the source directory from Udacity can be found here: https://github.com/udacity/Value-based-methods/tree/main?tab=readme-ov-file) 
+2. Follow the Dependencies from the Value-based-methods README markdown. For easier navigation, I copied the dependencies in this project's README markdown in the following section.
 3. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
@@ -53,7 +53,7 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
-4. Place the file in the GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+4. Place the file in the GitHub repository, in the `banana_collector/` folder, and unzip (or decompress) the file. 
 
 ### Dependencies
 
@@ -91,14 +91,14 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 ### Instructions
 
-There are two possibilities how to execute the training of the agent. This is up to the preference of the user. Running it in the terminal is usually faster then running the training in a Jupyter Notebook.
+There are two possibilities how to execute the training of the agent. This is up to the preference of the user.
 
 #### Possibility 1: Running the training in the terminal via the `train_agent.py` file
 1. Open the `train_agent.py` file.
-2. Define in section `if __name__ == '__main__':` the trial number indicating your individual trial and the respective parameters for the training: number of episodes, maximum number of timesteps per episode, epsilon start for the epsilon-greedy action selection, the minimum value for epsilon, and the epsilion decay.
-3. Navigate to the projects directory in your command terminal, ensure the dependencies are installed properly and the respective conda environment is activated. Then run the training by running the following comman:
+2. Define in section `if __name__ == '__main__':` the trial number indicating your individual trial for the saving logic and the respective parameters for the training: number of episodes, maximum number of timesteps per episode, epsilon start for the epsilon-greedy action selection, the minimum value for epsilon, and the epsilion decay.
+3. Navigate to directory `banana_collector` in your command terminal, ensure the dependencies are installed properly and the respective conda environment is activated. Then run the training by running the following command:
  ```bash
- python3 train_agent.py
+ python3 src/train_agent.py
  ```
 
 #### Possibility 2: Running the training in the `Training.ipynb`
@@ -106,18 +106,18 @@ There are two possibilities how to execute the training of the agent. This is up
 
 ### Structure of the Repository
 
-├── results                 
-├── dqn_agent.py                    # Documentation files (alternatively `doc`)
-├── model.py                     # Source files (alternatively `lib` or `app`)
-├── test                    # Automated tests (alternatively `spec` or `tests`)
-├── tools                   # Tools and utilities
-├── LICENSE
-└── README.md
-
-
-
-
-
-
-
-
+```
+├── results
+│   ├── further_viz         # folder containing further visualizations
+│   ├── model_weights       # folder containing the weights of the trained agents
+│   └── training_scores     # folder containing the scores as numpy files and the viz of scores
+├── src                     # Main files for training the DQN Agent
+│   ├── dqn_agent.py        # Containing the implementation of the DQN Agent
+│   ├── model.py            # Containing the Q-Network model
+│   ├── train_agent.py      # main training script containing the training workflow of the DQN 
+│   └── utils.py            # Contains helper functions to create plots
+Agent
+├── README.md               # README you are currently reading
+├── Report.md               # Report about the learning algorithm, Learning
+└── Training.ipynb          # Notebook containing the Training as Jupyter Notebook
+```
