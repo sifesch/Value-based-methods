@@ -20,7 +20,7 @@ In the upcoming section [Project Details](#project-details), an introduction int
     - [Dependencies](#dependencies)
     - [Instructions](#instructions)
       - [Possibility 1: Running the training in the terminal via the `train_agent.py` file](#possibility-1-running-the-training-in-the-terminal-via-the-train_agentpy-file)
-      - [Possibility 2: Running the training in the `Navigation.ipynb`](#possibility-2-running-the-training-in-the-navigationipynb)
+      - [Possibility 2: Running the training in the `Training.ipynb`](#possibility-2-running-the-training-in-the-trainingipynb)
 
 
 ### Project Details
@@ -101,9 +101,18 @@ There are two possibilities how to execute the training of the agent. This is up
  python3 train_agent.py
  ```
 
-#### Possibility 2: Running the training in the `Navigation.ipynb`
-1. Follow the instructions in `Navigation.ipynb`
+#### Possibility 2: Running the training in the `Training.ipynb`
+1. Follow the instructions in `Training.ipynb`
 
+### Structure of the Repository
+
+├── results                 
+├── dqn_agent.py                    # Documentation files (alternatively `doc`)
+├── model.py                     # Source files (alternatively `lib` or `app`)
+├── test                    # Automated tests (alternatively `spec` or `tests`)
+├── tools                   # Tools and utilities
+├── LICENSE
+└── README.md
 
 
 
