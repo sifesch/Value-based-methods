@@ -95,12 +95,12 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
 There are two possibilities how to execute the training of the agent. This is up to the preference of the user.
 
-#### Possibility 1: Running the training in the terminal via the `train_agent.py` file
-1. Open the `train_agent.py` file.
+#### Possibility 1: Running the training in the terminal via the `main_train.py` file
+1. Open the `main_train.py` file.
 2. Define in section `if __name__ == '__main__':` the trial number indicating your individual trial for the saving logic and the respective parameters for the training: number of episodes, maximum number of timesteps per episode, epsilon start for the epsilon-greedy action selection, the minimum value for epsilon, and the epsilion decay.
-3. Navigate to directory `banana_collector` in your command terminal, ensure the dependencies are installed properly and the respective conda environment is activated. Then run the training by running the following command:
+3. Navigate to directory `banana_collector/src` in your command terminal, ensure the dependencies are installed properly and the respective conda environment is activated. Then run the training by running the following command:
  ```bash
- python3 src/train_agent.py
+ python3 main_train.py
  ```
 
 #### Possibility 2: Running the training in the `Training.ipynb`
@@ -109,17 +109,17 @@ There are two possibilities how to execute the training of the agent. This is up
 ### Structure of the Repository
 
 ```
-├── results
-│   ├── further_viz         # folder containing further visualizations
-│   ├── model_weights       # folder containing the weights of the trained agents
-│   └── training_scores     # folder containing the scores as numpy files and the viz of scores
 ├── src                     # Main files for training the DQN Agent
+│   ├── results
+│   │   ├── further_viz         # folder containing further visualizations
+│   │   ├── model_weights       # folder containing the weights of the trained agents
+│   │   └── training_scores     # folder containing the scores as numpy files and the viz of scores
 │   ├── dqn_agent.py        # Containing the implementation of the DQN Agent
+│   ├── dqn_training.py     # Containing implementation of the dqn function
 │   ├── model.py            # Containing the Q-Network model
-│   ├── train_agent.py      # main training script containing the training workflow of the DQN 
-│   └── utils.py            # Contains helper functions to create plots
-Agent
+│   ├── main_train.py       # main training script (Alternative to Training.ipynb)
+│   ├── utils.py            # Contains helper functions to create plots
+│   └── Training.ipynb      # Notebook containing the Training as Jupyter Notebook
 ├── README.md               # README you are currently reading
-├── Report.md               # Report about the learning algorithm, Learning
-└── Training.ipynb          # Notebook containing the Training as Jupyter Notebook
+└── Report.md               # Report about the learning algorithm, Learning
 ```

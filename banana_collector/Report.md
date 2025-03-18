@@ -2,7 +2,7 @@
 
 The QNetwork, which we already implemented earlier in this course, was utilized as model for solving the banana collector problem. This QNetwork consits of an input layer representing the number of states (37), two hidden layers, both with 64 nodes, followed by an output layer, consisting of the amount of available actions (4). The output layer produces the final q-value for all possible actions. Both hidden Layers are followed by a ReLu activation function. The following graphic represents a less complex depiction of the model architecture of the QNetwork (e.g. the input layer should have 37 nodes and the two hidden layers should each have 64 nodes).
 
-![Alt text](results/model_architecture.png)
+![Alt text](results/further_viz/model_architecture.png)
 
 
 
