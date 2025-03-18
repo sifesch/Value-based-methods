@@ -21,6 +21,8 @@ In the upcoming section [Project Details](#project-details), an introduction int
     - [Instructions](#instructions)
       - [Possibility 1: Running the training in the terminal via the `train_agent.py` file](#possibility-1-running-the-training-in-the-terminal-via-the-train_agentpy-file)
       - [Possibility 2: Running the training in the `Training.ipynb`](#possibility-2-running-the-training-in-the-trainingipynb)
+    - [Structure of the Repository](#structure-of-the-repository)
+
 
 
 ### Project Details

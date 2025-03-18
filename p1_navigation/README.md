@@ -104,6 +104,15 @@ There are two possibilities how to execute the training of the agent. This is up
 #### Possibility 2: Running the training in the `Navigation.ipynb`
 1. Follow the instructions in `Navigation.ipynb`
 
+### Structure of the Repository
+
+├── results                 
+├── dqn_agent.py                    # Documentation files (alternatively `doc`)
+├── model.py                     # Source files (alternatively `lib` or `app`)
+├── test                    # Automated tests (alternatively `spec` or `tests`)
+├── tools                   # Tools and utilities
+├── LICENSE
+└── README.md
 
 
 

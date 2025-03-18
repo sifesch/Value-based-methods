@@ -4,7 +4,7 @@ The QNetwork, which we already implemented earlier in this course, was utilized 
 
 ![Alt text](results/model_architecture.png)
 
-The following code snippet represents this visual architecture.
+
 
 ```bash
 class QNetwork(nn.Module):
