@@ -6,11 +6,14 @@ from collections import deque
 from unityagents import UnityEnvironment
 from dqn_agent import Agent
 
-def dqn(brain_name, env: UnityEnvironment, agent: Agent, n_episodes=2000, max_t=1000, eps_start=1.0, eps_end=0.01, eps_decay=0.995,training_trial_number='03'):
+def dqn(brain_name, env: UnityEnvironment, agent: Agent, n_episodes: int = 2000, max_t: int = 1000, eps_start: float = 1.0, eps_end:float = 0.01, eps_decay: float = 0.995, training_trial_number: str = '03') -> list:
     """Deep Q-Learning.
     
     Params
     ======
+        brain_name (str): name of the brain in the unity env.
+        env (UnityEnvironment): The Unity env instance in which the agent interacts. Provides states, rewards, etc.
+        agent (Agent): rl agent that interacts with env
         n_episodes (int): maximum number of training episodes
         max_t (int): maximum number of timesteps per episode
         eps_start (float): starting value of epsilon, for epsilon-greedy action selection
