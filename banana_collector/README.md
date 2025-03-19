@@ -116,10 +116,10 @@ There are two possibilities how to execute the training of the agent. This is up
 │   │   └── training_scores     # folder containing the scores as numpy files and the viz of scores
 │   ├── dqn_agent.py        # Containing the implementation of the DQN Agent
 │   ├── dqn_training.py     # Containing implementation of the dqn function
-│   ├── model.py            # Containing the Q-Network model
 │   ├── main_train.py       # main training script (Alternative to Training.ipynb)
+│   ├── model.py            # Containing the Q-Network model
 │   ├── utils.py            # Contains helper functions to create plots
 │   └── Training.ipynb      # Notebook containing the Training as Jupyter Notebook
 ├── README.md               # README you are currently reading
-└── Report.md               # Report about the learning algorithm, Learning
+└── Report.md               # Report about the learning algorithm, reward plots and future ides for project improvements
 ```
